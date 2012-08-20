@@ -1,0 +1,254 @@
+%section#study.accordion
+  %h1 studietilbud
+  .tabcontents
+    #view1.tabcontent
+      %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
+        %input#kat_studiepoeng_min.hidden{:maxlength => "4", :name => "kat_studiepoeng_min", :type => "text", :value => "179"}
+        %input#kat_studiepoeng_max.hidden{:maxlength => "4", :name => "kat_studiepoeng_max", :type => "text", :value => "181"}
+        %select.multibox.populate{:name => "cat4[]", :style => 'width:100%;', :multiple => 'true', :data => {:placeholder => "Velg interesser"}}
+          %option{:value => "16"} Adm. / økonomi / ledelse
+          %option{:value => "17"} Helse- og sosialfag
+          %option{:value => "18"} Idrettsfag/friluftsliv
+          %option{:value => "19"} IT / IKT / Informatikk
+          %option{:value => "53"} Realfag
+          %option{:value => "23"} Skuespill
+          %option{:value => "25"} Ingeniør
+          %option{:value => "27"} Pedagogikk / lærerutdanning
+          %option{:value => "28"} Design/innovasjon
+          %option{:value => "29"} Språk og litteratur
+          %option{:value => "30"} Organisasjon / ledelse
+          %option{:value => "35"} Samfunnsfag / historie / filosofi
+          %option{:value => "36"} Revisjon / regnskap
+          %option{:value => "50"} Scenekunst
+          %option{:value => "37"} Markedsføring / kommunikasjon
+          %option{:value => "41"} Musikk
+          %option{:value => "46"} Eiendomsforvalter
+          %option{:value => "47"} Verditaksering
+        %input.btn.blue{:name => "kat_submit", :onclick => "CallJS('Progress()');", :type => "submit", :value => "Søk"}
+        %a#knappenmin.btn.green{:href => "#"} Alle våre studier
+    #view2.tabcontent
+      %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
+        %input#kat_studiepoeng_min.hidden{:maxlength => "4", :name => "kat_studiepoeng_min", :type => "text", :value => "119"}
+        %input#kat_studiepoeng_max.hidden{:maxlength => "4", :name => "kat_studiepoeng_max", :type => "text", :value => "121"}
+        %select.multibox{:name => "cat4[]",  :style => 'width:100%;', :multiple => 'true', :data => {:placeholder => "Velg interesser"}}
+          %option{:value => "16"} Adm. / økonomi / ledelse
+          %option{:value => "17"} Helse- og sosialfag
+          %option{:value => "18"} Idrettsfag/friluftsliv
+          %option{:value => "19"} IT / IKT / Informatikk
+          %option{:value => "53"} Realfag
+          %option{:value => "23"} Skuespill
+          %option{:value => "25"} Ingeniør
+          %option{:value => "27"} Pedagogikk / lærerutdanning
+          %option{:value => "28"} Design/innovasjon
+          %option{:value => "29"} Språk og litteratur
+          %option{:value => "30"} Organisasjon / ledelse
+          %option{:value => "35"} Samfunnsfag / historie / filosofi
+          %option{:value => "36"} Revisjon / regnskap
+          %option{:value => "50"} Scenekunst
+          %option{:value => "37"} Markedsføring / kommunikasjon
+          %option{:value => "41"} Musikk
+          %option{:value => "46"} Eiendomsforvalter
+          %option{:value => "47"} Verditaksering
+        %input.btn{:name => "kat_submit", :onclick => "CallJS('Progress()');", :type => "submit", :value => "Søk"}
+    #view3.tabcontent
+      %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
+        %input#kat_studiepoeng_min.hidden{:maxlength => "4", :name => "kat_studiepoeng_min", :type => "text", :value => "59"}
+        %input#kat_studiepoeng_max.hidden{:maxlength => "4", :name => "kat_studiepoeng_max", :type => "text", :value => "61"}
+        %select.multibox{:name => "cat4[]",  :style => 'width:100%;', :multiple => 'true', :data => {:placeholder => "Velg interesser"}}
+          %option{:value => "16"} Adm. / økonomi / ledelse
+          %option{:value => "17"} Helse- og sosialfag
+          %option{:value => "18"} Idrettsfag/friluftsliv
+          %option{:value => "19"} IT / IKT / Informatikk
+          %option{:value => "53"} Realfag
+          %option{:value => "23"} Skuespill
+          %option{:value => "25"} Ingeniør
+          %option{:value => "27"} Pedagogikk / lærerutdanning
+          %option{:value => "28"} Design/innovasjon
+          %option{:value => "29"} Språk og litteratur
+          %option{:value => "30"} Organisasjon / ledelse
+          %option{:value => "35"} Samfunnsfag / historie / filosofi
+          %option{:value => "36"} Revisjon / regnskap
+          %option{:value => "50"} Scenekunst
+          %option{:value => "37"} Markedsføring / kommunikasjon
+          %option{:value => "41"} Musikk
+          %option{:value => "46"} Eiendomsforvalter
+          %option{:value => "47"} Verditaksering
+        %input.btn{:name => "kat_submit", :onclick => "CallJS('Progress()');", :type => "submit", :value => "Søk"}
+    #view4.tabcontent
+      %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
+        %select.multibox{:multiple => "", :name => "cat3[]", :style => 'width:100%;', :data => {:placeholder => "Velg type"}}
+          %option{:value => "all", :disabled => 'true'} Alle
+          %option{:value => "7", :disabled => 'true'} Ordinær utdanning
+          %option{:value => "10", :selected => 'true'} Etter- og videreutdanning, ordinær
+          %option{:value => "43", :selected => 'true'} Etter- og videreutdanning, betalingsstudium
+          %option{:value => "54", :selected => 'true'} Etter- og videreutdanning, eksterne aktører
+          %option{:value => "45", :disabled => 'true'} Deltid
+          %option{:value => "44", :disabled => 'true'} Heltid
+
+        %select.multibox{:name => "cat4[]",  :style => 'width:100%;', :multiple => 'true', :data => {:placeholder => "Velg interesser"}}
+          %option{:value => "16"} Adm. / økonomi / ledelse
+          %option{:value => "17"} Helse- og sosialfag
+          %option{:value => "18"} Idrettsfag/friluftsliv
+          %option{:value => "19"} IT / IKT / Informatikk
+          %option{:value => "53"} Realfag
+          %option{:value => "23"} Skuespill
+          %option{:value => "25"} Ingeniør
+          %option{:value => "27"} Pedagogikk / lærerutdanning
+          %option{:value => "28"} Design/innovasjon
+          %option{:value => "29"} Språk og litteratur
+          %option{:value => "30"} Organisasjon / ledelse
+          %option{:value => "35"} Samfunnsfag / historie / filosofi
+          %option{:value => "36"} Revisjon / regnskap
+          %option{:value => "50"} Scenekunst
+          %option{:value => "37"} Markedsføring / kommunikasjon
+          %option{:value => "41"} Musikk
+          %option{:value => "46"} Eiendomsforvalter
+          %option{:value => "47"} Verditaksering
+        %input.btn.blue{:name => "kat_submit", :onclick => "CallJS('Progress()');", :type => "submit", :value => "Søk"}
+
+
+  %ul.tabs.vertical
+    %li
+      %a.active{:href => "#view1", :rel => "view1"} Bachelorstudier
+    %li
+      %a{:href => "#view2", :rel => "view2"} Masterstudier
+    %li
+      %a{:href => "#view3", :rel => "view3"} Årsstudier
+    %li
+      %a{:href => "#view4", :rel => "view4"} Etter- og videreutdanning
+
+
+%section#news-promoted
+  %h1 aktuelt
+  #slider.nivoSlider
+    
+    %a{:href => "http://hiof.no"}
+      %img{:alt => "", "data-thumb" => "/images/toystory.jpg", :src => "/forsidebilde/540x305-forsidebilde-1.jpg", :title => "#htmlcaption1"}
+      #htmlcaption1.nivo-html-caption
+        %h1 Opptaket i år gir ytterligere økning i studenttInteressene ved HiØ
+        %p De gode søkertInteressene som ble offentliggjort etter søknadsfristen 15. april, ga en indikasjon på at det ville bli økt konkurranse om studieplassene ved HiØ i år. HiØ er blant de høgskolene i Norge som har hatt størst økning i søkertInteressene i år.       
+    %a{:href => "http://hiof.no"}
+      %img{:alt => "", "data-thumb" => "/images/up.jpg", :src => "/forsidebilde/540x305-forsidebilde-2.jpg", :title => "#htmlcaption2"}  
+      #htmlcaption2.nivo-html-caption
+        %h1 Title 2 
+        %p Introduction text
+    %a{:href => "http://hiof.no"}
+      %img{:alt => "", "data-thumb" => "/images/wInteresse.jpg", :src => "/forsidebilde/540x305-forsidebilde-3.jpg", :title => "#htmlcaption3"}
+      #htmlcaption3.nivo-html-caption
+        %h1 Title 3
+        %p Introduction text  
+    %a{:href => "http://hiof.no"}
+      %img{:alt => "", "data-thumb" => "/images/nemo.jpg", :src => "/forsidebilde/540x305-forsidebilde-4.jpg", :title => "#htmlcaption4"}
+      #htmlcaption4.nivo-html-caption
+        %h1 Title 4
+        %p Introduction text
+
+
+
+%aside#calendar
+  %h1 kommende eventer
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Studiestart
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 14 aug
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+        %span{:itemprop => "locality"} Halden
+        %span{:itemprop => "region"} Østfold
+
+
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Forskningsdagene
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 21 sep
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+        %span{:itemprop => "locality"} Halden
+        %span{:itemprop => "region"} Østfold
+
+
+
+
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Småbarnsdagene i Østfold
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 25 okt
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> K.G. Meldahlsv. 9, Kråkerøy
+        %span{:itemprop => "locality"} Fredrikstad
+        %span{:itemprop => "region"} Østfold
+
+
+
+
+
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Datamessa
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 15 nov
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+        %span{:itemprop => "locality"} Halden
+        %span{:itemprop => "region"} Østfold
+
+
+
+%section#news-headlines
+  %ul
+    %li 
+      %a{:href => "#"} Opptaket i år gir ytterligere økning i studenttallene ved Høgskolen i Østfold
+    %li 
+      %a{:href => "#"} Velkommen til studiestart
+    %li 
+      %a{:href => "#"} Oppfordrer til duell under Forskningsdagene
+    %li 
+      %a{:href => "#"} Skal kåre vinner til HiØs første Formidlingspris
+    %li 
+      %a{:href => "#"} Studentprosjekter som kvalifiserer til pris
+    / %li 
+    /   %a Nyhet nummer 6
+    / %li 
+    /   %a Nyhet nummer 7
+    / %li 
+    /   %a Nyhet nummer 8
+    / %li 
+    /   %a Nyhet nummer 9
+    / %li 
+    /   %a Nyhet nummer 10
+  %a.btn.blue.ss-icon.ss-right{:href => "#"} Les mer
+/ %section#adds
+/   %ul
+/     %li
+/       %a.btn.blue{:href => "/restetorget"}
+/         %strong Restetorget
+/         %span Ledige studieplasser
+/       %a.btn.green{:href => "/restetorget"} 
+/         %strong Søknadsfrist
+/         %span 15 april
+%aside#social-media.ss-icon
+  %a.facebook{:href => "http://facebook.com/blistudent", :title => "Høgskolen i Østfold på Facebook"}  / blistudent
+  %a.flickr{:href => "http://flickr.com/utdanning", :title => "Høgskolen i Østfold på Flickr"}  / utdanning
