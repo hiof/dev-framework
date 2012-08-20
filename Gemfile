@@ -24,7 +24,7 @@ group :assets do
   gem 'therubyracer'
   gem 'compass'
   gem 'compass-rails'
-  gem 'modernizr_rails'
+  gem 'modernizr_rails', :require => 'modernizr-rails'
 end
 
 gem 'jquery-rails'
