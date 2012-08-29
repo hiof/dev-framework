@@ -1,0 +1,10 @@
+-if notice
+  %p= notice
+
+%h1= @page.title
+
+= markdown(@page.content)
+
+%ul
+  %li= link_to 'Edit', edit_page_path(@page)
+  %li= link_to 'Back', pages_path
