@@ -87,7 +87,7 @@ Kjør følgende kommando i terminal / shell for å installere bakgrundsmoduler f
 
 ## Jobb med kode
 
-Frontend koden vil du finne i følgende mapper under /app/assets/
+Filene du i hovedsak vil arbeide med finner du i følgende mapper som er plassert under /app/assets/
 
     /coffeescript/
     /sass/
@@ -117,6 +117,31 @@ Koble deg til NetEd serveren (smb://neted1.hiof.no/hiof_no)
 
 Eks. http://www.hiof.no/nor/hogskolen-i-ostfold/om-hogskolen?testmode
 
+Kode skal fungere i følgende nettlesere 
+
+Internet Explorer 7+
+Firefox 3.5+
+Safari 3+
+Chrome 4+
+
+Safari iOS (iOS3 eller seinere)
+Opera iOS
+Chrome iOS
+Opera Android
+Chrome Android
+Firefox Android
+
+
+
 ## Push kode live
 
-Etter at koden har blitt testet 
+For å aktivere ferdig testet kode live skifter man over riktig JS/CSS MD5 id fra test til live i følgende fil:
+    neted1.hiof.no/hiof_no/customer/hiof/includes/WEBDESIGN_2012/_css-and-js.inc
+    
+# Contributing
+
+1. Fork it
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Commit your changes (git commit -am 'Added some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
