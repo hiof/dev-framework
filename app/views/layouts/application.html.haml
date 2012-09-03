@@ -40,8 +40,6 @@
 
     - if current_page?('/')
       %section#content-frontpage{:role => "main"}
-        - if flash[:notice]
-          %p= flash[:notice]
         =yield
         -# if @article.sidebarmodulea?
       -#%section#content-frontpage{:role => "main"}
@@ -67,8 +65,6 @@
       -#    = render :partial => "layouts/sidebar-b"
     - else
       %section#content{:role => "main"}
-        - if flash[:notice]
-          %p= flash[:notice]
         =#render :partial => "pages/frontpage"
         =yield
         -# if @article.sidebarmodulea?
