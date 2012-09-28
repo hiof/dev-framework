@@ -1,3 +1,0 @@
-[submodule "app/assets"]
-	path = app/assets
-	url = git@github.com:hiof/frontend.git
