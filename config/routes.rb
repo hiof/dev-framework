@@ -6,6 +6,7 @@ HiofDev::Application.routes.draw do
   root :to => 'pages#_frontpage'
 
   match 'student/' => 'pages#_student'
+  match 'ansatt/' => 'pages#_employee'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
