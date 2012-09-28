@@ -138,17 +138,19 @@
       %li
         %a.last.media{"data-icon" => "6", :href => "/media"} Media
   - if current_page?('/')
+  -# elsif current_page?('/student')
+  -# elsif current_page?('/ansatt')
   - else
     %nav#breadcrumb{:role => "navigation"}
       .trailTxtLink{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
         %a{:href => "/index.php?ID=101&lang=nor", :itemprop => "url"}
-          %span.ss-icon.ss-home{:itemprop => "title"} Høgskolen i Østfold
+          %span.ss-home{:itemprop => "title"} Høgskolen i Østfold
       .trailTxtLink{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
         %a{:href => "/index.php?ID=163&lang=nor", :itemprop => "url"}
           %span{:itemprop => "title"} Aktuelt
       .trailTxtLink{:itemscope => "", :itemtype => "http://data-vocabulary.org/Breadcrumb"}
         %a{:href => "/index.php?ID=165&lang=nor", :itemprop => "url"}
-          %span{:itemprop => "title"} Høgskoleavisa
+          %span{:itemprop => "title"} Student
 
     
 

@@ -51,18 +51,37 @@
 
 
       
-      -#- elseif current_page?('/student')
-      -#  %section#content-frontpage{:role => "main"}
-      -#    - if flash[:notice]
-      -#      %p= flash[:notice]
-      -#    =yield
-      -#  %aside#page_tree_nav{:role => "navigation"}
-      -#    = render :partial => "layouts/page-tree-nav"
-      -#  %aside#sidebar_a{:role => "complementary"}
-      -#    = render :partial => "layouts/sidebar-a"
-      -#  -# if article.sidebarmoduleb?
-      -#  %aside#sidebar_b{:role => "complementary"}
-      -#    = render :partial => "layouts/sidebar-b"
+    - elsif current_page?('/student')
+      %section#tools-student
+        = render :partial => "layouts/employee-student-bar"
+      %section#content-student{:role => "main"}
+        - if flash[:notice]
+          %p= flash[:notice]
+        =yield
+      %aside#page_tree_nav{:role => "navigation"}
+        = render :partial => "layouts/page-tree-nav"
+      %aside#sidebar_a{:role => "complementary"}
+        = render :partial => "layouts/sidebar-a"
+      -# if article.sidebarmoduleb?
+      %aside#sidebar_b{:role => "complementary"}
+        = render :partial => "layouts/sidebar-b"
+
+    - elsif current_page?('/ansatt')
+      %section#tools-employee
+        = render :partial => "layouts/employee-student-bar"
+
+      %section#content-employee{:role => "main"}
+        - if flash[:notice]
+          %p= flash[:notice]
+        =yield
+      %aside#page_tree_nav{:role => "navigation"}
+        = render :partial => "layouts/page-tree-nav"
+      %aside#sidebar_a{:role => "complementary"}
+        = render :partial => "layouts/sidebar-a"
+      -# if article.sidebarmoduleb?
+      %aside#sidebar_b{:role => "complementary"}
+        = render :partial => "layouts/sidebar-b"
+    
     - else
       %section#content{:role => "main"}
         =#render :partial => "pages/frontpage"
