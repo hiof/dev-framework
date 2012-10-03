@@ -1,5 +1,145 @@
-%ul#tools
-  %li
-    %a{:href => '#'} Link
-%section#events
+- if current_page?('/student')
+  %ul#links-student
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Fronter
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Intranett
+    %li
+      %a{:href => '#'}
+        %span.ss-icon monitor
+        Studentweb
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Romreservasjon
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Finn ansatt
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Timeplaner
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Studenthåndbok
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Studieplaner
+- else # Ansatt
+  %ul#links-employee
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Fronter
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Intranett
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Finn ansatt
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Email
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Trio
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        SAP Portal
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        Romreservasjon
+    %li
+      %a{:href => '#'}
+        %span.ss-icon right
+        DelRett
+
+%section#calendar
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Studiestart
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 14 aug
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+        %span{:itemprop => "locality"} Halden
+        %span{:itemprop => "region"} Østfold
+
+
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Forskningsdagene
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 21 sep
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+        %span{:itemprop => "locality"} Halden
+        %span{:itemprop => "region"} Østfold
+
+
+
+
+  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+      %span{:itemprop => "summary"} Småbarnsdagene i Østfold
+    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+    %span{:itemprop => "description"}
+      Beskrivelse av eventen
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 25 okt
+    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+      %span{:itemprop => "name"} Høgskolen i Østfold
+      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+        %span{:itemprop => "street-address"}> K.G. Meldahlsv. 9, Kråkerøy
+        %span{:itemprop => "locality"} Fredrikstad
+        %span{:itemprop => "region"} Østfold
+
+
+
+
 %section#food
+  #fredrikstad
+    %h1
+      %span.ss-icon utensils
+      Fredrikstad
+    %ul
+      %li
+        %a{:href => "#"}
+          Vaffel+kaffe kampanje hele uke 39
+      %li
+        %a{:href => "#"}
+          Kaffebaren holder langåpent torsdager
+  #halden
+    %h1
+      %span.ss-icon utensils
+      Halden
+    %ul
+      %li
+        %a{:href => "#"}
+          Vaffel+kaffe kampanje hele uke 39
+      %li
+        %a{:href => "#"}
+          Kaffebaren holder langåpent torsdager
