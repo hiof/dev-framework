@@ -1,5 +1,5 @@
 %section#study-selection.accordion
-  %h1 studietilbud
+  / %h1 studietilbud
   .tabcontents
     #view1.tabcontent
       %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
@@ -119,34 +119,65 @@
 
 
 %section#news-promoted
-  %h1 aktuelt
-  #slider.nivoSlider
-    
-    %a{:href => "http://hiof.no"}
-      %img{:alt => "", "data-thumb" => "/images/toystory.jpg", :src => "/forsidebilde/540x305-forsidebilde-1.jpg", :title => "#htmlcaption1"}
-      #htmlcaption1.nivo-html-caption
-        %h1 Opptaket i år gir ytterligere økning i studenttInteressene ved HiØ
-        %p De gode søkertInteressene som ble offentliggjort etter søknadsfristen 15. april, ga en indikasjon på at det ville bli økt konkurranse om studieplassene ved HiØ i år. HiØ er blant de høgskolene i Norge som har hatt størst økning i søkertInteressene i år.       
-    %a{:href => "http://hiof.no"}
-      %img{:alt => "", "data-thumb" => "/images/up.jpg", :src => "/forsidebilde/540x305-forsidebilde-2.jpg", :title => "#htmlcaption2"}  
-      #htmlcaption2.nivo-html-caption
-        %h1 Title 2 
-        %p Introduction text
-    %a{:href => "http://hiof.no"}
-      %img{:alt => "", "data-thumb" => "/images/wInteresse.jpg", :src => "/forsidebilde/540x305-forsidebilde-3.jpg", :title => "#htmlcaption3"}
-      #htmlcaption3.nivo-html-caption
-        %h1 Title 3
-        %p Introduction text  
-    %a{:href => "http://hiof.no"}
-      %img{:alt => "", "data-thumb" => "/images/nemo.jpg", :src => "/forsidebilde/540x305-forsidebilde-4.jpg", :title => "#htmlcaption4"}
-      #htmlcaption4.nivo-html-caption
-        %h1 Title 4
-        %p Introduction text
+  / %h1 aktuelt
+  %ul.bjqs
+    %li
+      %a{:href => "/student"}
+        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-1.jpg"}/
+        .caption
+          %h1 Student site
+          %p This is the first caption
+    %li
+      %a{:href => "/ansatt"}
+        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-2.jpg"}/
+        .caption
+          %h1 Employee site
+          %p This is another caption
+    %li
+      %a{:href => "#"}
+        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-3.jpg"}/
+        .caption
+          %h1 Regular page
+          %p The third caption
+
+
+  -#<ul class="bjqs">
+  -#<li><img src="img/banner01.jpg" title="Automatically generated caption"></li>
+  -#<li><img src="img/banner02.jpg" title="Automatically generated caption"></li>
+  -#<li><img src="img/banner03.jpg" title="Automatically generated caption"></li>
+  -#</ul>
+
+
+
+
+
+  -##slider.nivoSlider
+  -#  
+  -#  %a{:href => "http://hiof.no"}
+  -#    %img{:alt => "", "data-thumb" => "/images/toystory.jpg", :src => "/forsidebilde/540x305--#forsidebilde-1.jpg", :title => "#htmlcaption1"}
+  -#    #htmlcaption1.nivo-html-caption
+  -#      %h1 Opptaket i år gir ytterligere økning i studenttInteressene ved HiØ
+  -#      %p De gode søkertInteressene som ble offentliggjort etter søknadsfristen 15. april, ga en -#indikasjon på at det ville bli økt konkurranse om studieplassene ved HiØ i år. HiØ er blant de -#høgskolene i Norge som har hatt størst økning i søkertInteressene i år.       
+  -#  %a{:href => "http://hiof.no"}
+  -#    %img{:alt => "", "data-thumb" => "/images/up.jpg", :src => "/forsidebilde/540x305-forsidebilde-2.-#jpg", :title => "#htmlcaption2"}  
+  -#    #htmlcaption2.nivo-html-caption
+  -#      %h1 Title 2 
+  -#      %p Introduction text
+  -#  %a{:href => "http://hiof.no"}
+  -#    %img{:alt => "", "data-thumb" => "/images/wInteresse.jpg", :src => "/forsidebilde/540x305--#forsidebilde-3.jpg", :title => "#htmlcaption3"}
+  -#    #htmlcaption3.nivo-html-caption
+  -#      %h1 Title 3
+  -#      %p Introduction text  
+  -#  %a{:href => "http://hiof.no"}
+  -#    %img{:alt => "", "data-thumb" => "/images/nemo.jpg", :src => "/forsidebilde/540x305-forsidebilde-4-#.jpg", :title => "#htmlcaption4"}
+  -#    #htmlcaption4.nivo-html-caption
+  -#      %h1 Title 4
+  -#      %p Introduction text
 
 
 
 %aside#calendar
-  %h1 kommende eventer
+  / %h1 kommende eventer
   %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Studiestart

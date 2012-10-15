@@ -48,13 +48,13 @@
     - elsif current_page?('/student')
       %section#tools-student
         = render :partial => "layouts/employee-student-bar"
-      %section#content-student{:role => "main"}
+      %section#content{:role => "main"}
         - if flash[:notice]
           %p= flash[:notice]
         =yield
-      %aside#page_tree_nav{:role => "navigation"}
+      %aside#page_tree_nav.clearfix{:role => "navigation"}
         = render :partial => "layouts/page-tree-nav"
-      %aside#sidebar_a{:role => "complementary"}
+      %aside#sidebar_a.clearfix{:role => "complementary"}
         = render :partial => "layouts/sidebar-a"
       -# if article.sidebarmoduleb?
       %aside#sidebar_b{:role => "complementary"}
@@ -64,13 +64,13 @@
       %section#tools-employee
         = render :partial => "layouts/employee-student-bar"
 
-      %section#content-employee{:role => "main"}
+      %section#content{:role => "main"}
         - if flash[:notice]
           %p= flash[:notice]
         =yield
-      %aside#page_tree_nav{:role => "navigation"}
+      %aside#page_tree_nav.clearfix{:role => "navigation"}
         = render :partial => "layouts/page-tree-nav"
-      %aside#sidebar_a{:role => "complementary"}
+      %aside#sidebar_a.clearfix{:role => "complementary"}
         = render :partial => "layouts/sidebar-a"
       -# if article.sidebarmoduleb?
       %aside#sidebar_b{:role => "complementary"}
