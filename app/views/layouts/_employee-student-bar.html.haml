@@ -66,8 +66,8 @@
         %span.ss-icon.ss-standard email
         Email
 
-%section#calendar
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+%section
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Studiestart
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -83,7 +83,7 @@
         %span{:itemprop => "region"} Østfold
 
 
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Forskningsdagene
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -101,7 +101,7 @@
 
 
 
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Småbarnsdagene i Østfold
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/

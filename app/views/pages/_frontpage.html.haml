@@ -141,44 +141,13 @@
           %p The third caption
 
 
-  -#<ul class="bjqs">
-  -#<li><img src="img/banner01.jpg" title="Automatically generated caption"></li>
-  -#<li><img src="img/banner02.jpg" title="Automatically generated caption"></li>
-  -#<li><img src="img/banner03.jpg" title="Automatically generated caption"></li>
-  -#</ul>
 
 
 
 
-
-  -##slider.nivoSlider
-  -#  
-  -#  %a{:href => "http://hiof.no"}
-  -#    %img{:alt => "", "data-thumb" => "/images/toystory.jpg", :src => "/forsidebilde/540x305--#forsidebilde-1.jpg", :title => "#htmlcaption1"}
-  -#    #htmlcaption1.nivo-html-caption
-  -#      %h1 Opptaket i år gir ytterligere økning i studenttInteressene ved HiØ
-  -#      %p De gode søkertInteressene som ble offentliggjort etter søknadsfristen 15. april, ga en -#indikasjon på at det ville bli økt konkurranse om studieplassene ved HiØ i år. HiØ er blant de -#høgskolene i Norge som har hatt størst økning i søkertInteressene i år.       
-  -#  %a{:href => "http://hiof.no"}
-  -#    %img{:alt => "", "data-thumb" => "/images/up.jpg", :src => "/forsidebilde/540x305-forsidebilde-2.-#jpg", :title => "#htmlcaption2"}  
-  -#    #htmlcaption2.nivo-html-caption
-  -#      %h1 Title 2 
-  -#      %p Introduction text
-  -#  %a{:href => "http://hiof.no"}
-  -#    %img{:alt => "", "data-thumb" => "/images/wInteresse.jpg", :src => "/forsidebilde/540x305--#forsidebilde-3.jpg", :title => "#htmlcaption3"}
-  -#    #htmlcaption3.nivo-html-caption
-  -#      %h1 Title 3
-  -#      %p Introduction text  
-  -#  %a{:href => "http://hiof.no"}
-  -#    %img{:alt => "", "data-thumb" => "/images/nemo.jpg", :src => "/forsidebilde/540x305-forsidebilde-4-#.jpg", :title => "#htmlcaption4"}
-  -#    #htmlcaption4.nivo-html-caption
-  -#      %h1 Title 4
-  -#      %p Introduction text
-
-
-
-%aside#calendar
+%aside
   / %h1 kommende eventer
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Studiestart
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -194,7 +163,7 @@
         %span{:itemprop => "region"} Østfold
 
 
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Forskningsdagene
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -212,7 +181,7 @@
 
 
 
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Småbarnsdagene i Østfold
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -227,11 +196,7 @@
         %span{:itemprop => "locality"} Fredrikstad
         %span{:itemprop => "region"} Østfold
 
-
-
-
-
-  %div{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Datamessa
     -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
@@ -245,7 +210,6 @@
         %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
         %span{:itemprop => "locality"} Halden
         %span{:itemprop => "region"} Østfold
-
 
 
 %section#news-headlines
