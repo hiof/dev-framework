@@ -58,7 +58,7 @@ module HiofDev
 
     config.generators.stylesheet_engine = :sass
     # Version of your assets, change this if you want to expire all your assets
-    config.assets.version = '1.2.0'
+    config.assets.version = '1.2.1'
     # config.assets.paths << "#{Rails.root}/app/assets/sass"
     # config.assets.paths << "#{Rails.root}/app/assets/coffeescripts"
     config.assets.paths << Rails.root.join("app", "assets", "sass")
