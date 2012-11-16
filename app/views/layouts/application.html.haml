@@ -49,7 +49,7 @@
     - elsif current_page?('/student')
       %section#tools-student
         = render :partial => "layouts/employee-student-bar"
-      %section#content{:role => "main"}
+      %section#content.pages-student{:role => "main"}
         - if flash[:notice]
           %p= flash[:notice]
         =yield
@@ -65,7 +65,7 @@
       %section#tools-employee
         = render :partial => "layouts/employee-student-bar"
 
-      %section#content{:role => "main"}
+      %section#content.pages-employee{:role => "main"}
         - if flash[:notice]
           %p= flash[:notice]
         =yield
