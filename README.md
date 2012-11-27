@@ -9,6 +9,10 @@ Høgskolen i Østfold bruker tjenesten GitHub for versjonshåndtering av kode ve
 
 ## Installer nødvendige verktøy
 
+### (Mac) Installer Xcode
+
+Last ned og installer Xcode fra app store.
+
 ### Installer Git
 
 Last ned og installer Git for ditt operativsystem her:
