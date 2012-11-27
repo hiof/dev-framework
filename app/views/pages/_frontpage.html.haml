@@ -1,5 +1,15 @@
 %section#study-selection.accordion
-  / %h1 studietilbud
+  %h1 Studietilbud
+  %ul.tabs.vertical
+    %li
+      %a.active{:href => "#view1", :rel => "view1"} Bachelorstudier
+    %li
+      %a{:href => "#view2", :rel => "view2"} Masterstudier
+    %li
+      %a{:href => "#view3", :rel => "view3"} Årsstudier
+    %li
+      %a{:href => "#view4", :rel => "view4"} Etter- og videreutdanning
+
   .tabcontents
     #view1.tabcontent
       %form{:action => "/studiesok?", :method => "GET", :name => "studie"}
@@ -107,45 +117,7 @@
         %input.btn.blue{:name => "kat_submit", :onclick => "CallJS('Progress()');", :type => "submit", :value => "Søk"}
 
 
-  %ul.tabs.vertical
-    %li
-      %a.active{:href => "#view1", :rel => "view1"} Bachelorstudier
-    %li
-      %a{:href => "#view2", :rel => "view2"} Masterstudier
-    %li
-      %a{:href => "#view3", :rel => "view3"} Årsstudier
-    %li
-      %a{:href => "#view4", :rel => "view4"} Etter- og videreutdanning
-
-
-%section#news-promoted
-  / %h1 aktuelt
-  %ul.bjqs
-    %li
-      %a{:href => "/student"}
-        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-1.jpg"}/
-        .caption
-          %h1 Student site
-          %p This is the first caption
-    %li
-      %a{:href => "/ansatt"}
-        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-2.jpg"}/
-        .caption
-          %h1 Employee site
-          %p This is another caption
-    %li
-      %a{:href => "#"}
-        %img{:alt => "", :src => "/forsidebilde/540x305-forsidebilde-3.jpg"}/
-        .caption
-          %h1 Regular page
-          %p The third caption
-
-
-
-
-
-
-%aside
+%aside#calendar
   / %h1 kommende eventer
   %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
@@ -178,9 +150,6 @@
         %span{:itemprop => "locality"} Halden
         %span{:itemprop => "region"} Østfold
 
-
-
-
   %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
     %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
       %span{:itemprop => "summary"} Småbarnsdagene i Østfold
@@ -196,45 +165,111 @@
         %span{:itemprop => "locality"} Fredrikstad
         %span{:itemprop => "region"} Østfold
 
-  %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
-    %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
-      %span{:itemprop => "summary"} Datamessa
-    -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
-    %span{:itemprop => "description"}
-      Beskrivelse av eventen
-    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 15 nov
-    %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
-    %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
-      %span{:itemprop => "name"} Høgskolen i Østfold
-      %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
-        %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
-        %span{:itemprop => "locality"} Halden
-        %span{:itemprop => "region"} Østfold
+  / %div.calendar-item{:itemscope => "", :itemtype => "http://data-vocabulary.org/Event"}
+  /   %a{:href => "http://www.example.com/events/spinaltap", :itemprop => "url"}
+  /     %span{:itemprop => "summary"} Datamessa
+  /   -#%img{:itemprop => "photo", :src => "spinal_tap.jpg"}/
+  /   %span{:itemprop => "description"}
+  /     Beskrivelse av eventen
+  /   %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "startDate"} 15 nov
+  /   %time{:datetime => "2015-10-15T19:00-08:00", :itemprop => "endDate"} Oct 15, 9:00PM
+  /   %span{:itemprop => "location", :itemscope => "", :itemtype => "http://data-vocabulary.org/​Organization"}
+  /     %span{:itemprop => "name"} Høgskolen i Østfold
+  /     %span{:itemprop => "address", :itemscope => "", :itemtype => "http://data-vocabulary.org/Address"}
+  /       %span{:itemprop => "street-address"}> B.R.A. veien 4 Remmen, Halden
+  /       %span{:itemprop => "locality"} Halden
+  /       %span{:itemprop => "region"} Østfold
 
 
-%section#news-headlines
-  %ul
-    %li 
-      %a{:href => "#"} Opptaket i år gir ytterligere økning i studenttallene ved Høgskolen i Østfold
-    %li 
-      %a{:href => "#"} Velkommen til studiestart
-    %li 
-      %a{:href => "#"} Oppfordrer til duell under Forskningsdagene
-    %li 
-      %a{:href => "#"} Skal kåre vinner til HiØs første Formidlingspris
-    %li 
-      %a{:href => "#"} Studentprosjekter som kvalifiserer til pris
 
-  %a.btn.blue.ss-icon.ss-right{:href => "#"} Les mer
-/ %section#adds
-/   %ul
-/     %li
-/       %a.btn.blue{:href => "/restetorget"}
-/         %strong Restetorget
-/         %span Ledige studieplasser
-/       %a.btn.green{:href => "/restetorget"} 
-/         %strong Søknadsfrist
-/         %span 15 april
 %aside#social-media
-  %a.facebook.ss-icon{:href => "http://facebook.com/blistudent", :title => "Høgskolen i Østfold på Facebook"}  / blistudent
-  %a.flickr.ss-icon{:href => "http://flickr.com/utdanning", :title => "Høgskolen i Østfold på Flickr"}  / utdanning
+  %a.ss-facebook.facebook{:href => "http://facebook.com/blistudent", :title => "Høgskolen i Østfold på Facebook"}  / blistudent
+  %a.ss-instagram.instagram{:href => "http://flickr.com/utdanning", :title => "Høgskolen i Østfold på Instagram"}  / blistudent
+  %a.ss-twitter.twitter{:href => "http://flickr.com/utdanning", :title => "Høgskolen i Østfold på Twitter"}  / blistudent
+  %a.ss-flickr.flickr{:href => "http://flickr.com/utdanning", :title => "Høgskolen i Østfold på Flickr"}  / utdanning
+
+
+%section#news-promoted
+  %section#news-frontpage
+    %h1
+      %a.ss-news{:href => "#"}
+        Aktuelt
+      %a{:href => "#"}
+        %span.ss-icon.right
+          RSS&nbsp;&nbsp;
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3320&module=news", :title => "Les mer: Viktig hjerteforskning"}
+        %img.picture{:alt => "Hjertetrening654.jpg", :src => "http://hiof.no/uimg/20121121/Hjertetrening654.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3320&module=news", :title => "Les mer: Viktig hjerteforskning"} Viktig hjerteforskning
+      %p.lead-paragraph 30 hjertepasienter peser seg nå gjennom et banebrytende forskningsprosjekt ved Høgskolen i Østfold.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3320&module=news", :title => "Les mer: Viktig hjerteforskning"} Les mer
+      %span.published [21.11.2012]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3315&module=news", :title => "Les mer: Bok om norsk iseksport"}
+        %img.picture{:alt => "CasperSrensen654.jpg", :src => "http://hiof.no/uimg/20121119/CasperSrensen654.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3315&module=news", :title => "Les mer: Bok om norsk iseksport"} Bok om norsk iseksport
+      %p.lead-paragraph Sammen med Hans-Jørgen Wallin Weihe fra Høgskolen i Lillehammer, har Høgskolen i Østfolds Carsten M. Syvertsen skrevet boken ”Den Norske Iseksporten”.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3315&module=news", :title => "Les mer: Bok om norsk iseksport"} Les mer
+      %span.published [19.11.2012]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3313&module=news", :title => "Les mer: Hans Blom valgt til rektor ved HiØ"}
+        %img.picture{:alt => "HansBlomPortrett654.jpg", :src => "http://hiof.no/uimg/20121008/HansBlomPortrett654.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3313&module=news", :title => "Les mer: Hans Blom valgt til rektor ved HiØ"} Hans Blom valgt til rektor ved HiØ
+      %p.lead-paragraph Resultatene av rektorvalget og valg av nytt styret er nå klart. Nesten 60 prosent av de ansatte stemte ved rektorvalget, og over 60 prosent benyttet sin stemme i valg av interne styremedlemmer. Dette er en oppgang i valgdeltakelsen fra 2007 på over 20 prosent.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3313&module=news", :title => "Les mer: Hans Blom valgt til rektor ved HiØ"} Les mer
+      %span.published [16.11.2012]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3314&module=news", :title => "Les mer: Norges beste studentvalg"}
+        %img.picture{:alt => "Feiret rekordvalget med kake", :src => "http://hiof.no/uimg/20121116/Rekordvalg2012.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3314&module=news", :title => "Les mer: Norges beste studentvalg"} Norges beste studentvalg
+      %p.lead-paragraph Studentparlamentet ved Høgskolen i Østfold har klart det igjen: Aldri før har så mange studenter stemt ved noe studentvalg i Norge.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3314&module=news", :title => "Les mer: Norges beste studentvalg"} Les mer
+      %span.published [16.11.2012]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3311&module=news", :title => "Les mer: Høgskoletilbud i Moss og Indre Østfold"}
+        %img.picture{:alt => "Hi_CampusMoss654.jpg", :src => "http://hiof.no/uimg/20121115/Hi_CampusMoss654.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3311&module=news", :title => "Les mer: Høgskoletilbud i Moss og Indre Østfold"} Høgskoletilbud i Moss og Indre Østfold
+      %p.lead-paragraph Høgskolen i Østfold ønsker å tilby fleksibel kompetanseheving i form av videreutdanninger på et lokalt studiested i nærområdet, derfor undertegnes det nå intensjonsavtaler med Moss kommune og Indre Østfold.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=3311&module=news", :title => "Les mer: Høgskoletilbud i Moss og Indre Østfold"} Les mer
+      %span.published [15.11.2012]
+
+  %section#news-fou.science
+    %h1
+      %a{:href => "#"}
+        Forskning
+      %a{:href => "#"}
+        %span.ss-icon.right
+          RSS&nbsp;&nbsp;
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=2437&module=news", :title => "Les mer: Strålende kritikker til HiØ professor"}
+        %img.picture{:alt => "Foto: GT Nergaard/Trøndelag teater", :src => "http://hiof.no/uimg/20100922/_TDwOoKhF40pxmcPRIF-fABpK_nowtXweKtFfs8_nBeQ.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=2437&module=news", :title => "Les mer: Strålende kritikker til HiØ professor"} Strålende kritikker til HiØ professor
+      %p.lead-paragraph Professor Serge von Arx, kunstnerisk leder for scenografi ved Høgskolens Akademi for scenekunst, får strålende kritikk for scenografien i forestillingen Ifigineia. Scenografien inngår i hans forskning på performativ arkitektur.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=2437&module=news", :title => "Les mer: Strålende kritikker til HiØ professor"} Les mer
+      %span.published [22.09.2010]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1447&module=news", :title => "Les mer: Ny HiØ-strategi i styret"}
+        %img.picture{:alt => "elinogbirgitta.jpg", :src => "http://hiof.no/uimg/20080922/elinogbirgitta.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1447&module=news", :title => "Les mer: Ny HiØ-strategi i styret"} Ny HiØ-strategi i styret
+      %p.lead-paragraph Hvordan utvikle nye mål og strategier for HiØ? Det var blant hovedteamene i mandagens høgskolestyremøte. Midtveis gav rektor Elin Nesje Vestli en takk- og blomsterhilsen til avtroppende høgskoledirektør Birgitta Rødstøl Næss (t.h).
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1447&module=news", :title => "Les mer: Ny HiØ-strategi i styret"} Les mer
+      %span.published [22.09.2008]
+    %article.article
+      %a.picture-title{:href => "/index.php?/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1446&module=news", :title => "Les mer: Forskning i kjøpesenter"}
+        %img.picture{:alt => "forskning654torvbyen.jpg", :src => "http://hiof.no/uimg/20080920/forskning654torvbyen.jpg"}/
+      %h2
+        %a.title{:href => "/index.php?ID=165&/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1446&module=news", :title => "Les mer: Forskning i kjøpesenter"} Forskning i kjøpesenter
+      %p.lead-paragraph På Torvbyen kjøpesenter i Fredrikstad fikk Høgskolen i Østfold starte Forskningsdagene 2008 lørdag. Sykepleierstudentene (bildet) var også med. I ei uke framover vil høgskolen vise fram hva som gjøres innen forskning og utvikling i Østfold.
+      %a.read-more{:href => "/nor/hogskolen-i-ostfold/forside/forside/?&displayitem=1446&module=news", :title => "Les mer: Forskning i kjøpesenter"} Les mer
+      %span.published [20.09.2008]
+
+
+
+
