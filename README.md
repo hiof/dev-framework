@@ -106,11 +106,11 @@ Det er anbefalt å jobbe på en egen lokal branch slik at man alltid pusher til 
 ## Generere kode for å pushe det til serveren.
 Kjør følgende i terminal for å kompilere frontend kode
 
-    rake assets:precompile
+    bundle exec rake assets:precompile
 
 Kode vil da bli generert og lagret i mappen /public/assets/
 
-## Push kode til test
+## Kopier kode til Neted for test
 
 Koble deg til NetEd serveren (smb://neted1.hiof.no/hiof_no) 
 
@@ -137,15 +137,15 @@ Firefox Android
 
 
 
-## Push kode live
+## Kjøre kode live
 
 For å aktivere ferdig testet kode live skifter man over riktig JS/CSS MD5 id fra test til live i følgende fil:
     neted1.hiof.no/hiof_no/customer/hiof/includes/WEBDESIGN_2012/_css-and-js.inc
     
-# Contributing
+# Publisere til Github
 
-1. Fork it
-2. Create your feature branch (git checkout -b my-new-feature)
-3. Commit your changes (git commit -am 'Added some feature')
-4. Push to the branch (git push origin my-new-feature)
-5. Create new Pull Request
+1. Commit lokalt (skriv hva som endres)
+2. Pull fra Github server
+3. Gå igjennom evt kollisjoner eller endringer som påvirker det du har gjort
+4. Kjør Push tilbake.
+
