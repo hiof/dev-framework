@@ -106,7 +106,7 @@ Det er anbefalt å jobbe på en egen lokal branch slik at man alltid pusher til 
 ## Generere kode for å pushe det til serveren.
 Kjør følgende i terminal for å kompilere frontend kode
 
-    rake assets:precompile
+    bundle exec rake assets:precompile
 
 Kode vil da bli generert og lagret i mappen /public/assets/
 
