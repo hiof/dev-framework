@@ -35,9 +35,9 @@ Eksempel på output:
      ruby 1.8.7 (2012-02-08 patchlevel 358) [universal-darwin12.0]
 
 #### Mac 
-Installer Ruby 1.9.3-p194:
+Installer Ruby 1.9.3-p327:
 
-    rvm install 1.9.3-p194
+    rvm install 1.9.3-p327
 
 ### Install rubygems
 
